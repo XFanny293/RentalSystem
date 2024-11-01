@@ -11,8 +11,8 @@ public enum ItemType implements BaseEnum {
     ROOM(2, "房间");
 
 
-    @EnumValue
-    @JsonValue
+    @EnumValue  // 解析 枚举对象中的属性code，把code值取出来给sql中的type字段使用
+    @JsonValue  // 解析 枚举对象中的属性code，把code值转换到json对象中，响应给前端
     private Integer code;
     private String name;
 

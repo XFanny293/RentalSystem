@@ -17,6 +17,10 @@ import java.util.Date;
  */
 @Component
 public class MybatisMetaObjectHandler implements MetaObjectHandler {
+    /**
+     * 对标注了fill=FieldFill.INSERT的属性进行填充
+     * @param metaObject 元对象
+     */
     @Override
     public void insertFill(MetaObject metaObject) {
         this.strictInsertFill(metaObject,"createTime", Date.class,new Date());
